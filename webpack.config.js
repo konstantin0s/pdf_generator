@@ -4,9 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/pdf_generator/', // Add this line
+    publicPath: '/build/', // Add this line
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -44,10 +44,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    contentBase: path.join(__dirname, 'dist'),
+    // static: {
+    //   directory: path.join(__dirname, 'build'),
+    // },
+    contentBase: path.join(__dirname, 'build'),
     compress: true,
     port: 3000,
     open: true,
