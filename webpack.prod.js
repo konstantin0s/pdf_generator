@@ -11,7 +11,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    publicPath: '/pdf_generator/', // Ensure this matches your GitHub repository name
+    publicPath: '', // Ensure this matches your GitHub repository name
   },
   plugins: [
     new CleanWebpackPlugin(),
