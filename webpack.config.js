@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'production', //change to development (on local)
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'), // Ensure the dist output path is set to 'dist'
@@ -44,10 +45,23 @@ module.exports = {
     }),
   ],
   devServer: {
+    // static: {
+    //   directory: path.join(__dirname, 'dist'),
+    // },
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'dist'),
+      staticOptions: {},
+      // Don't be confused with `devMiddleware.publicPath`, it is `publicPath` for static directory
+      // Can be:
+      // publicPath: ['/static-public-path-one/', '/static-public-path-two/'],
+      publicPath: '',
+      // Can be:
+      // serveIndex: {} (options for the `serveIndex` option you can find https://github.com/expressjs/serve-index)
+      serveIndex: true,
+      // Can be:
+      // watch: {} (options for the `watch` option you can find https://github.com/paulmillr/chokidar)
+      watch: true,
     },
-    // contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
     open: true,
