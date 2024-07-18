@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - develop # Set this to the branch you want to trigger the workflow
+      - main # Set this to the branch you want to trigger the workflow
 
 jobs:
   build:
@@ -16,16 +16,17 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
-          node-version: '18' # Use the Node.js version you prefer
+          node-version: '14' # Use the Node.js version you prefer
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
       - name: Build the React app
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.HOME_TOKEN }}@github.com/${{ github.repository }}.git
+          npm run deploy
