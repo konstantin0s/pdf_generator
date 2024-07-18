@@ -24,6 +24,8 @@ export const PdfPage = () => {
   const [currentField, setCurrentField] = useState('');
   const [currentValue, setCurrentValue] = useState('');
 
+  console.log({ isModalOpen });
+
   const handleExportToPDF = () => {
     const input = document.getElementById('preview');
     html2canvas(input).then((canvas) => {

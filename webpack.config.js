@@ -1,9 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const MAIN_FILE_NAME = 'root'
 module.exports = {
   mode: 'production', //change to development (on local)
-  entry: './src/index.tsx',
+  // entry: './src/index.tsx',
+  entry: {
+    [MAIN_FILE_NAME]: path.join(__dirname, 'src', 'index.tsx'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'), // Ensure the dist output path is set to 'dist'
     filename: 'bundle.js',
