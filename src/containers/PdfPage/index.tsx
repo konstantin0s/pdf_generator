@@ -80,7 +80,7 @@ export const PdfPage = () => {
       </div>
 
       <Modal
-        //appElement={document.getElementById('root') as any}
+        appElement={document.getElementById('root') as any}
         isOpen={isModalOpen}
         onRequestClose={handleCancel}
         contentLabel='Edit Text'
