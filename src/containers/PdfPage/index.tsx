@@ -1,14 +1,14 @@
 import { Button } from '@mui/material';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import Modal from 'react-modal';
 
 export const PdfPage = () => {
-  useEffect(() => {
-    Modal?.setAppElement('#root');
-  }, []);
+  // useEffect(() => {
+  //   Modal?.setAppElement('#root');
+  // }, []);
 
   const [content, setContent] = useState({
     name: 'Constantin Tofan',
@@ -78,6 +78,7 @@ export const PdfPage = () => {
       </div>
 
       <Modal
+        appElement={document.getElementById('root') as any}
         isOpen={isModalOpen}
         onRequestClose={handleCancel}
         contentLabel='Edit Text'
