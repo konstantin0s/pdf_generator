@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const MAIN_FILE_NAME = 'root'
 module.exports = {
-  mode: 'development', //change to development (on local)
+  mode: 'production', //change to development (on local)
   // entry: './src/index.tsx',
   entry: {
     [MAIN_FILE_NAME]: path.join(__dirname, 'src', 'index.tsx'),
