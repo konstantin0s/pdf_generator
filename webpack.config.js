@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/build/', // Add this line
+    publicPath: '/', // Add this line
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
