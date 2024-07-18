@@ -1,13 +1,15 @@
 import { Button } from '@mui/material';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import Modal from 'react-modal';
 
-Modal.setAppElement('#root');
-
 export const PdfPage = () => {
+  useEffect(() => {
+    Modal?.setAppElement('#root');
+  }, []);
+
   const [content, setContent] = useState({
     name: 'Constantin Tofan',
     contactInfo: 'Rotterdam | 0616912946 | constant.tofan@gmail.com',
