@@ -19,7 +19,7 @@ const App = () => {
 };
 
 const ThemedApp = () => {
-  const { greyMode } = useTheme();
+  const { greyMode }: any = useTheme();
 
   return (
     <>
