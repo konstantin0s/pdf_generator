@@ -11,7 +11,7 @@ export const PdfPage = () => {
   // }, []);
 
   const [content, setContent] = useState({
-    name: 'Constantin Tofan',
+    name: 'Luciano Triftong',
     contactInfo: 'Amsterdam | 0619230320 | add_your_email@gmail.com',
     date: 'July 13, 2024',
     recipient: '[X company]',
