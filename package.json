@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://konstantin0s.github.io/pdf_generator",
   "scripts": {
-    "start": "webpack serve --hot",
-    "build": "webpack --mode production",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "npm run build && gh-pages -d dist",
     "install-legacy": "npm cache clean --force && npm install --legacy-peer-deps",
     "test": "jest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "keywords": [],
   "author": "",
