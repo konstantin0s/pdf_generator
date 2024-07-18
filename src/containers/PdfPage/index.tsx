@@ -12,11 +12,12 @@ export const PdfPage = () => {
 
   const [content, setContent] = useState({
     name: 'Constantin Tofan',
-    contactInfo: 'Rotterdam | 0616912946 | constant.tofan@gmail.com',
+    contactInfo: 'Amsterdam | 0619230320 | add_your_email@gmail.com',
     date: 'July 13, 2024',
     recipient: '[X company]',
-    position: 'Full-stack Engineer',
-    body: `I am enthusiastic to apply for the Full-stack Engineer position at [X company]. With over 10 years of experience in software development and a strong background in both front-end and back-end technologies, I am confident in my ability to contribute to your dynamic DevOps team.\n\nIn my current role at [X company], I have developed microservices and SPAs using React, React-Redux, NodeJS, and TypeScript. I have also implemented CI/CD pipelines with GitHub Actions and Jenkins, optimizing deployment processes. I reduced page load times by 40% and improved state management with Redux Toolkit, enhancing application performance by 25%.\n\nI am proficient in Docker, Kubernetes, and Microsoft Azure, and I hold certifications in Azure Solutions Architect Expert. My experience in maintaining container solutions and automating operational processes aligns well with Capgemini's focus on self-service and automation.\n\nI am eager to bring my technical skills and problem-solving abilities to Capgemini. Thank you for considering my application. I look forward to discussing how I can contribute to your team.`,
+    position: 'RE: Attorney at law',
+    body: `I am enthusiastic to apply for the Attorney at law position at [X company]. With over 10 years of experience in [job description] and a strong background in [skill 1 and skill 2], I am confident in my ability to contribute to your dynamic Law team.\n\nIn my current role at [X company], I have helped clients with their immigration issues in all states in the US and in different countries.......................................................................................................
+    . ....................................................................................................\n\nI am eager to bring my technical skills and problem-solving abilities to [X company]. Thank you for considering my application. I look forward to discussing how I can contribute to your team.`,
     closing: 'Sincerely, your name',
   });
 

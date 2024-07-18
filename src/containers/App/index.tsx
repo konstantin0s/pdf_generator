@@ -23,7 +23,7 @@ const ThemedApp = () => {
     <>
       <StyledThemeProvider theme={{ greyMode }}>
         <GlobalStyle />
-        <Container>
+        <Container id='my-did'>
           {/* <Router>
             <Routes> */}
           <HomePage />
