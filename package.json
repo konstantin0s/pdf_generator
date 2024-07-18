@@ -9,7 +9,7 @@
     "install-legacy": "npm cache clean --force && npm install --legacy-peer-deps",
     "test": "jest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
