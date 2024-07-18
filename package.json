@@ -2,7 +2,6 @@
   "name": "react-cover-letter-editor",
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
   "homepage": "https://konstantin0s.github.io/pdf_generator",
   "scripts": {
     "start": "webpack serve --hot",
