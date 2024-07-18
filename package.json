@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
-  "homepage": "https://konstantin0s.github.io/pdf_generator""scripts": {
+  "homepage": "https://konstantin0s.github.io/pdf_generator",
+  "scripts": {
     "start": "webpack serve --hot",
     "build": "webpack --mode production",
     "install-legacy": "npm cache clean --force && npm install --legacy-peer-deps",
