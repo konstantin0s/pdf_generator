@@ -11,11 +11,16 @@ export const GlobalStyle = createGlobalStyle`
     body {
     font-family: Arial, sans-serif;
     background-color: ${({ theme }) => (theme?.greyMode ? '#f6f5f0' : '#fff')} !important;
-    color: ${({ theme }) => (theme?.greyMode ? '##9c92b0' : '#333')} !important;
+    color: ${({ theme }) => (theme?.greyMode ? '#9c92b0' : '#333')} !important;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
+.modal-open .pdf-page {
+  filter: blur(5px);
+}
+
 
 .pdf-page {
   font-family: Arial, sans-serif;
@@ -23,19 +28,67 @@ export const GlobalStyle = createGlobalStyle`
   padding: 20px;
   height: 100%;
   min-height: 100%;
+  margin-bottom: 300px;
   position: relative;
+  transition: filter 0.3s ease-in-out;
+    border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+
+body.modal-open {
+  overflow: hidden;
+}
+
 .preview-container {
+  background-color: #fff; /* Ensure white background for the preview */
+  padding: 20px;
+  // max-width: 800px;
+  // width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.artistic-header {
+  background: linear-gradient(135deg, #6b73ff, #000dff);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.artistic-header h1 {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+
+.hoverable-text-container {
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+   border: 1px dashed #fff;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.preview-container-no-border {
+  background-color: #fff; /* Ensure white background for the preview */
   padding: 20px;
   border: none;
+
 }
 
 .preview-container .header,
 .preview-container .body,
 .preview-container .footer {
   margin-bottom: 20px;
-  margin-top: 70px;
+  margin-top: 5px;
   width: 100%;
 }
 
@@ -75,16 +128,23 @@ export const GlobalStyle = createGlobalStyle`
   font-size: 16px;
 }
 
-.hoverable-text-container {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  text-align: left;
-   padding: 10px;
+// .hoverable-text-container {
+//   position: relative;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   transition: background-color 0.3s ease;
+//   text-align: left;
+//   padding: 10px;
+//   border: 1px dashed #fff;
+//   background-color: #fff;
+// }
 
+#preview, canvas {
+  background-color: #fff !important;
+  border: none;
 }
+
 
 .hoverable-text-container:hover {
   border: 1px solid #286e36;
@@ -148,10 +208,11 @@ export const GlobalStyle = createGlobalStyle`
 
 
 .small-modal {
+ z-index: 100;
    background: white;
   border-radius: 10px;
   padding: 20px;
-  width: 65%;
+  width: 35%;
   height:auto;
   min-height: 30%;
   margin: auto;
@@ -161,6 +222,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 .large-modal {
+   z-index: 100;
  background: white;
   border-radius: 10px;
   padding: 20px;
@@ -203,11 +265,11 @@ input {
 }
 
 #download-btn {
-    position: relative;
-    margin-bottom: 20px;
-    float: left;
-    top: 31px;
-    left: -81px;
+  position: relative;
+  top: 106px;
+  left: -278px;
+  float: left;
+  z-index: 10;
 }
 
 .modal-header {
@@ -217,12 +279,15 @@ input {
 
 .modal-buttons {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 8px;
 }
 
 .modal-buttons button {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 180px;
+  border-radius: 5px;
 }
 
 textarea {
@@ -232,7 +297,7 @@ textarea {
   height: 480px;
 }
 
-textarea, input {
+textarea {
  margin: 10px 0px 10px 0px;
  position: relative;
  top: 40px;
@@ -241,7 +306,14 @@ textarea, input {
 
 input {
  height: 40px;
+ margin: 10px 0px 10px 0px;
+ position: relative;
+ top: 40px;
+  margin-bottom: 20px;
 }
+  input:last-of-type {
+   margin-bottom: 80px;
+  }
 `;
 
 export const theme = {

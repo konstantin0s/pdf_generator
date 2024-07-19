@@ -4,7 +4,7 @@ export const HomeContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -16,7 +16,7 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   text-align: center;
   position: relative;
 `;
