@@ -16,7 +16,7 @@ export const PdfPage = () => {
     dsasadsadasdasdsadasdasdasdasdsadsada\n\nI am eager to bring my technical skills and problem-solving abilities to [X company]. Thank you for considering my application. I look forward to discussing how I can contribute to your team.`,
     closing: 'Sincerely, your name',
   });
-  const [btnIndex, setBtnIndex] = useState('1');
+  const [btnIndex, setBtnIndex] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentField, setCurrentField] = useState('');
   const [currentValue, setCurrentValue] = useState('');
@@ -45,7 +45,7 @@ export const PdfPage = () => {
     } else {
       setCurrentValue(content[field]);
     }
-    setBtnIndex('0');
+    setBtnIndex(0);
     setIsModalOpen(true);
   };
 
@@ -63,11 +63,12 @@ export const PdfPage = () => {
       }));
     }
     setIsModalOpen(false);
+    setBtnIndex(1);
   };
 
   const handleCancel = () => {
     setIsModalOpen(false);
-    setBtnIndex('1');
+    setBtnIndex(1);
   };
 
   const handleChange = (e) => {
