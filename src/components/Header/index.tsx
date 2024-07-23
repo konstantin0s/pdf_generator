@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <Nav className='artistic-header'>
       <h1 style={{ color: '#fff', display: 'flex', textAlign: 'center', justifyContent: 'center', marginLeft: 'auto' }}>Pdf generator</h1>
-      <ThemeToggle onClick={toggleTheme}>{greyMode ? 'Grey Mode' : 'Light Mode'}</ThemeToggle>
+      <ThemeToggle onClick={toggleTheme}>{greyMode ? 'Light Mode' : 'Grey Mode'}</ThemeToggle>
     </Nav>
   );
 };
